@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # my apps
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
+    'trees.apps.TreesConfig',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +132,8 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 
 AUTH_USER_MODEL = "users.User" # indica que estou usando meu modelo de usuário
+
+# Media
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
