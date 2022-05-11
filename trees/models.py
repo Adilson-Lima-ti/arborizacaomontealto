@@ -18,9 +18,12 @@ class Square(TimeStampedModel):
     name = models.CharField('Nome', max_length=255, unique=True)
     description = models.TextField('Descrição', max_length=200, blank=True) #implementado
     address = models.CharField('Endereço', max_length=255, blank=True)#implementado
-    image1 = models.ImageField('imagem', upload_to=get_file_path, blank=True)#modificado original não tem 'imagem'
-    image2 = models.ImageField('imagem', upload_to=get_file_path, blank=True)
-    image3 = models.ImageField('imagem', upload_to=get_file_path, blank=True)
+    image1 = models.ImageField('imagem 1', upload_to=get_file_path, blank=True)#modificado original não tem 'imagem'
+    altimg1 = models.CharField('Alt imagem 1', max_length=150, blank=True)
+    image2 = models.ImageField('imagem 2', upload_to=get_file_path, blank=True)
+    altimg2 = models.CharField('Alt imagem 2', max_length=150, blank=True)
+    image3 = models.ImageField('imagem 3', upload_to=get_file_path, blank=True)
+    altimg3 = models.CharField('Alt imagem 3', max_length=150, blank=True)
     slug = AutoSlugField(unique=True, always_update=False, populate_from="name")
 
     class Meta:
@@ -77,10 +80,13 @@ class Tree(TimeStampedModel):
     source = models.CharField('Origem', max_length=20, choices=SOURCE_CHOICES)
     description = models.TextField('Descrição', blank=True)
     is_display = models.BooleanField('Exibir', default=True)
-    image1 = models.ImageField('imagem', upload_to=get_file_path, blank=True)#modificado original não tem 'imagem'
-    image2 = models.ImageField('imagem', upload_to=get_file_path, blank=True)#implementado
-    image3 = models.ImageField('imagem', upload_to=get_file_path, blank=True)#implementado
-    quantidade = models.PositiveIntegerField(default=0,null=False, blank=False)
+    image1 = models.ImageField('imagem 1', upload_to=get_file_path, blank=True)
+    altimg1 = models.CharField('Alt imagem 1', max_length=150, blank=True)#modificado original não tem 'imagem'
+    image2 = models.ImageField('imagem 2', upload_to=get_file_path, blank=True)
+    altimg2 = models.CharField('Alt imagem 2', max_length=150, blank=True)#implementado
+    image3 = models.ImageField('imagem 3', upload_to=get_file_path, blank=True)
+    altimg3 = models.CharField('Alt imagem 3', max_length=150, blank=True)#implementado
+    quantidade = models.PositiveIntegerField(default=1,null=False, blank=False)
   
     
     slug = AutoSlugField(unique=True, always_update=False, populate_from="name")
