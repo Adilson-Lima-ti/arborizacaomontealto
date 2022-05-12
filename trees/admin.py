@@ -18,6 +18,13 @@ class SquereAdmin(admin.ModelAdmin):
         "created", 
         "modified",
         ]
+    list_editable = [
+        "description",
+        "address",
+        "altimg1",
+        "altimg2",
+        "altimg3",
+        ]
 
 
 @admin.register(Specie)
@@ -53,4 +60,11 @@ class TreeAdmin(admin.ModelAdmin):
         "quantidade",
     ]
     list_filter = ["is_display", "created", "modified"]
-    list_editable = ["is_display", "source","quantidade"]
+    list_editable = [
+        "is_display",
+        "source",
+        "quantidade", 
+        "altimg1",
+        "altimg2",
+        "altimg3",
+        ]
