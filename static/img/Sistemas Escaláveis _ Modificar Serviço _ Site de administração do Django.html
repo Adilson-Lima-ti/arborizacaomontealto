@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://127.0.0.1:8000/admin/core/servico/6/change/ -->
+<html lang="pt-br" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sistemas Escaláveis | Modificar Serviço | Site de administração do Django</title>
+<link rel="stylesheet" type="text/css" href="./Sistemas Escaláveis _ Modificar Serviço _ Site de administração do Django_files/base.css">
+
+  <link rel="stylesheet" type="text/css" href="./Sistemas Escaláveis _ Modificar Serviço _ Site de administração do Django_files/nav_sidebar.css">
+  <script src="./Sistemas Escaláveis _ Modificar Serviço _ Site de administração do Django_files/nav_sidebar.js" defer=""></script>
+
+<link rel="stylesheet" type="text/css" href="./Sistemas Escaláveis _ Modificar Serviço _ Site de administração do Django_files/forms.css">
+
+
+<script src="./Sistemas Escaláveis _ Modificar Serviço _ Site de administração do Django_files/saved_resource"></script>
+<script src="./Sistemas Escaláveis _ Modificar Serviço _ Site de administração do Django_files/jquery.js"></script>
+<script src="./Sistemas Escaláveis _ Modificar Serviço _ Site de administração do Django_files/jquery.init.js"></script>
+<script src="./Sistemas Escaláveis _ Modificar Serviço _ Site de administração do Django_files/core.js"></script>
+<script src="./Sistemas Escaláveis _ Modificar Serviço _ Site de administração do Django_files/RelatedObjectLookups.js"></script>
+<script src="./Sistemas Escaláveis _ Modificar Serviço _ Site de administração do Django_files/actions.js"></script>
+<script src="./Sistemas Escaláveis _ Modificar Serviço _ Site de administração do Django_files/urlify.js"></script>
+<script src="./Sistemas Escaláveis _ Modificar Serviço _ Site de administração do Django_files/prepopulate.js"></script>
+<script src="./Sistemas Escaláveis _ Modificar Serviço _ Site de administração do Django_files/xregexp.js"></script>
+
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./Sistemas Escaláveis _ Modificar Serviço _ Site de administração do Django_files/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=" app-core model-servico change-form" data-admin-utc-offset="-10800">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name"><a href="http://127.0.0.1:8000/admin/">Fusion - Administração</a></h1>
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Bem-vindo(a),
+                <strong>adilson</strong>.
+            
+            
+                
+                    <a href="http://127.0.0.1:8000/">Ver o site</a> /
+                
+                
+                    
+                    
+                
+                
+                <a href="http://127.0.0.1:8000/admin/password_change/">Alterar senha</a> /
+                
+                <a href="http://127.0.0.1:8000/admin/logout/">Encerrar sessão</a>
+            
+        </div>
+        
+        
+        
+    </div>
+    
+    <!-- END Header -->
+    
+<div class="breadcrumbs">
+<a href="http://127.0.0.1:8000/admin/">Início</a>
+› <a href="http://127.0.0.1:8000/admin/core/">Core</a>
+› <a href="http://127.0.0.1:8000/admin/core/servico/">Serviços</a>
+› Sistemas Escaláveis
+</div>
+
+    
+
+    <div class="main shifted" id="main">
+      
+        
+          
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Alternar navegação"></button>
+<nav class="sticky" id="nav-sidebar">
+  <input type="search" id="nav-filter" placeholder="Start typing to filter…" aria-label="Filter navigation items">
+  
+
+
+  
+    <div class="app-auth module">
+      <table>
+        <caption>
+          <a href="http://127.0.0.1:8000/admin/auth/" class="section" title="Modelos na aplicação Autenticação e Autorização">Autenticação e Autorização</a>
+        </caption>
+        
+          <tbody><tr class="model-group">
+            
+              <th scope="row"><a href="http://127.0.0.1:8000/admin/auth/group/">Grupos</a></th>
+            
+
+            
+              <td><a href="http://127.0.0.1:8000/admin/auth/group/add/" class="addlink">Adicionar</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-user">
+            
+              <th scope="row"><a href="http://127.0.0.1:8000/admin/auth/user/">Usuários</a></th>
+            
+
+            
+              <td><a href="http://127.0.0.1:8000/admin/auth/user/add/" class="addlink">Adicionar</a></td>
+            
+
+            
+          </tr>
+        
+      </tbody></table>
+    </div>
+  
+    <div class="app-core module current-app">
+      <table>
+        <caption>
+          <a href="http://127.0.0.1:8000/admin/core/" class="section" title="Modelos na aplicação Core">Core</a>
+        </caption>
+        
+          <tbody><tr class="model-cargo">
+            
+              <th scope="row"><a href="http://127.0.0.1:8000/admin/core/cargo/">Cargos</a></th>
+            
+
+            
+              <td><a href="http://127.0.0.1:8000/admin/core/cargo/add/" class="addlink">Adicionar</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-funcionario">
+            
+              <th scope="row"><a href="http://127.0.0.1:8000/admin/core/funcionario/">Funcionários</a></th>
+            
+
+            
+              <td><a href="http://127.0.0.1:8000/admin/core/funcionario/add/" class="addlink">Adicionar</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-servico current-model">
+            
+              <th scope="row"><a href="http://127.0.0.1:8000/admin/core/servico/" aria-current="page">Serviços</a></th>
+            
+
+            
+              <td><a href="http://127.0.0.1:8000/admin/core/servico/add/" class="addlink">Adicionar</a></td>
+            
+
+            
+          </tr>
+        
+      </tbody></table>
+    </div>
+  
+
+
+</nav>
+
+        
+      
+      <div class="content">
+        
+          
+        
+        <!-- Content -->
+        <div id="content" class="colM">
+          
+          <h1>Modificar Serviço</h1>
+          <h2>Sistemas Escaláveis</h2>
+          <div id="content-main">
+
+
+  <ul class="object-tools">
+    
+      
+
+<li>
+    
+    <a href="http://127.0.0.1:8000/admin/core/servico/6/history/" class="historylink">Histórico</a>
+</li>
+
+
+
+    
+  </ul>
+
+
+<form method="post" id="servico_form" novalidate=""><input type="hidden" name="csrfmiddlewaretoken" value="l8ogw7qMUMKvfa07KD9diMPIu3rsUBdK6KXZtKwR7BPAWm96wV7DsbpX4TC4tIOn">
+<div>
+
+
+
+
+    <p class="errornote">
+    Por favor corrija o erro abaixo 
+    </p>
+    
+
+
+
+
+  <fieldset class="module aligned ">
+    
+    
+    
+        <div class="form-row field-ativo">
+            
+            
+                <div class="checkbox-row">
+                    
+                    
+                        <input type="checkbox" name="ativo" id="id_ativo" checked=""><label class="vCheckboxLabel" for="id_ativo">Ativo?</label>
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-servico">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_servico">Serviço:</label>
+                        
+                            <input type="text" name="servico" value="Sistemas Escaláveis" class="vTextField" maxlength="100" required="" id="id_servico">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row errors field-descricao">
+            <ul class="errorlist"><li>Certifique-se de que o valor tenha no máximo 200 caracteres (ele possui 201).</li></ul>
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_descricao">Descrição:</label>
+                        
+                            <textarea name="descricao" cols="40" rows="10" class="vLargeTextField" maxlength="200" required="" id="id_descricao">Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida.
+Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravi</textarea>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-icone">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_icone">Icone:</label>
+                        
+                            <select name="icone" required="" id="id_icone">
+  <option value="">---------</option>
+
+  <option value="lni-cog">Engrenagem</option>
+
+  <option value="lni-stats-up">Gráfico</option>
+
+  <option value="lni-users">Usuários</option>
+
+  <option value="lni-layers">Design</option>
+
+  <option value="lni-mobile">Mobile</option>
+
+  <option value="lni-rocket" selected="">Foguete</option>
+
+</select>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="submit-row">
+
+<input type="submit" value="Salvar" class="default" name="_save">
+
+    
+    <p class="deletelink-box"><a href="http://127.0.0.1:8000/admin/core/servico/6/delete/" class="deletelink">Apagar</a></p>
+
+
+<input type="submit" value="Salvar e adicionar outro(a)" name="_addanother">
+<input type="submit" value="Salvar e continuar editando" name="_continue">
+
+
+</div>
+
+
+
+    <script id="django-admin-form-add-constants" src="./Sistemas Escaláveis _ Modificar Serviço _ Site de administração do Django_files/change_form.js" async="">
+    </script>
+
+
+
+
+<script id="django-admin-prepopulated-fields-constants" src="./Sistemas Escaláveis _ Modificar Serviço _ Site de administração do Django_files/prepopulate_init.js" data-prepopulated-fields="[]">
+</script>
+
+
+</div>
+</form></div>
+
+          
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        <div id="footer"></div>
+      </div>
+    </div>
+</div>
+<!-- END Container -->
+
+
+</body></html>
