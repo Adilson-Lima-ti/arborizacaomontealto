@@ -29,5 +29,5 @@ class TreeListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["square"] = self.square
-        context["squaries"] = Square.objects.all()
+        context["squaries"] = Square.display.all()
         return context
