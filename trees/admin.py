@@ -5,7 +5,8 @@ from .models import Square, Specie, Tree, Family
 @admin.register(Square)
 class SquereAdmin(admin.ModelAdmin):
     list_display = [
-        "name", 
+        "name",
+        "is_display", 
         "description", 
         "address", 
         "image1",
@@ -20,6 +21,7 @@ class SquereAdmin(admin.ModelAdmin):
         ]
     list_editable = [
         "description",
+        "is_display",
         "address",
         "altimg1",
         "altimg2",

@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style_weather.css' %}"/>
+  <title>Weather</title>
+</head>
+
+<body>
+  <div class="container-fluid p-0 container-sm d-flex justify-content-center">
+
+    <div class="card text-center shadow-lg" style="width: 26rem;">
+
+      <div class="card-header bg-white text-dark font-weight-bold">
+        TEMPO E TEMPERATURA
+      </div>
+        <div class="card-body">
+          <div class="city">Monte Alto - SP</div>
+          <div class="date">Terça, 1 Dezembro 2020</div>
+          <div class="container-img">
+
+            <img src="{% static 'icons/unknown.png' %}">
+          </div>
+          <div class="container-temp mx-2 my-3">
+            <div>22</div>
+            <span>°c</span>
+          </div>
+          <div class="weather py-2">Nublado</div>
+          <div class="humid"> Humidade: <strong><span class="humidit">50%</span></strong></div>
+          
+      </div>
+
+    
+    </div>
+
+    </div>
+  <script src="{% static 'js/script-weather.js' %}"></script>
+  
+  <script src="https://kit.fontawesome.com/f0e17cbf2f.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

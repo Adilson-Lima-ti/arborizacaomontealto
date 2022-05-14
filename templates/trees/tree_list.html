@@ -12,15 +12,19 @@
 {% endblock title %}
 
 {% block content %}
-<section id="team" class="section-padding">  
-<div class="container"valign="top"> <!--my-3-->
+<section id="tree" class="section-padding">  
+<div class="container-fluid"valign="top"> <!--my-3-->
     
     <div class="row" valign="top"><!--row-->
         <div class="col-lg-3">
-            <ul class="list-group mb-3 mb-lg-0">
+            <div class="section-header text-center mb-8" >          
+                <h2 class="section-title wow fadeInDown mb-4" data-wow-delay="0.3s">Praças de Monte Alto</h2>
+             
+            </div>
+            <ul class="list-group mb-3 mb-lg-8">
                 <a class="text-decoration-none list-group-item list-group-item-light {% if not square %}active{% endif %}"
                     href="{% url 'trees:list' %}">
-                    Todos os produtos
+                    Todos as praças
                 </a>
 
                 {% for praca in squaries %}
@@ -30,10 +34,7 @@
                 </a>
                 {% endfor %}
             </ul>
-            <div class="section-header text-center" >          
-                <p class="section-title wow fadeInDown" data-wow-delay="0.3s">Meet our team</h2>
-             
-            </div>
+            
             <div class="section-header text-center">
                 {% if is_paginated %}
             {% include "pagination.html" with page=page_obj %}
@@ -44,23 +45,24 @@
         <!--fim col-lg-3-->
    
         <div class="col-lg-9">
-                
-            
+                            
             <div class="row" valign="top">
             {% for tree in tree_list %}
-            <div class="col-lg-6 col-md-12 col-xs-12">
-            <div class="card-header" valign="top">
+            <div class="col-lg-6 col-md-6 col-xs-6">
+                <a class="text-decoration-none text-dark" href="#modal{{ tree.slug }}"data-toggle="modal">   
+            <div class="card" valign="top">
             
-                <div class="team-item wow fadeInRight" data-wow-delay="0.8s">
-                    <div class="team-img"><img class="card-img-top" src="/media/{{tree.image1}}" alt="{{ tree.altimg1 }}">
+                <div class="tree-item wow fadeInRight" data-wow-delay="0.8s">
+                    <div class="tree-img"><img class="card-img-top" src="/media/{{tree.image1}}" alt="{{ tree.altimg1 }}">
                     </div>   
                 <div class="contetn ">
                     <div class="info-text">
-                    <h3><a href="#">{{ tree.nome }}</a></h3>
+                        <a class="text-decoration-none text-dark" href="#modal{{ tree.slug }}"data-toggle="modal"><h3>{{ tree.name }}</a></h3>
                     <p>{{ tree.specie }}</p>
-                    <p>{{ tree.square }}</p>
+                    </div>
+                    
                 </div>
-                </div>
+               
                 </div>
             </div>
         </div>
@@ -69,7 +71,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="font-weight-bold">{{ tree.name }}</h1><br>
+                            <a class="text-decoration-none text-dark" href="#modal{{ tree.slug }}"data-toggle="modal"></a><h1 class="font-weight-bold">{{ tree.name }}</h1><br>
                             
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>

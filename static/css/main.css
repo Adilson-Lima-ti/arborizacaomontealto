@@ -73,7 +73,7 @@ a:not([href]):not([tabindex]) {
 }
 
 .section-title {
-  font-size: 30px;
+  font-size: 24px;
   color: #0d4d2d;
   display: inline-block;
   font-weight: 700;
@@ -779,11 +779,11 @@ hr {
 }
 
 /* Team Item */
-.team-item:hover {
+.tree-item:hover {
   box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
 }
 
-.team-item {
+.tree-item {
   margin: 15px 0;
   border-radius: 0px;
   box-shadow: 0px 2px 18px 0px #8cd2a8;
@@ -791,21 +791,21 @@ hr {
   -moz-transition: all 0.3s ease-in-out 0s;
   -webkit-transition: all 0.3s ease-in-out 0s;
   -o-transition: all 0.3s ease-in-out 0s;
-  background: #fff;
+  background: rgb(225, 238, 220);
 }
 
-.team-item .team-img {
+.tree-item .tree-img {
   float: left;
   width: 200px;
   margin-right: 30px;
 }
 
-.team-item .contetn {
+.tree-item .contetn {
   padding: 15px 50px;
-  height: 200px;
+  height: 150px;
 }
 
-.team-item .social-icons {
+.tree-item .social-icons {
   padding-top: 11px;
   transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
@@ -813,17 +813,17 @@ hr {
   -o-transition: all 0.3s ease-in-out 0s;
 }
 
-.team-item .social-icons li {
+.tree-item .social-icons li {
   display: inline-block;
   margin-right: 10px;
 }
 
-.team-item .social-icons li a {
+.tree-item .social-icons li a {
   letter-spacing: 0px;
   outline: 0 !important;
 }
 
-.team-item .social-icons li a i {
+.tree-item .social-icons li a i {
   font-size: 18px;
   display: block;
   transition: all 0.3s ease-in-out 0s;
@@ -832,43 +832,44 @@ hr {
   -o-transition: all 0.3s ease-in-out 0s;
 }
 
-.team-item .social-icons li .lni-facebook-filled {
+.tree-item .social-icons li .lni-facebook-filled {
   color: #3b5998;
 }
 
-.team-item .social-icons li .lni-twitter-filled {
+.tree-item .social-icons li .lni-twitter-filled {
   color: #00aced;
 }
 
-.team-item .social-icons li .lni-instagram-filled {
+.tree-item .social-icons li .lni-instagram-filled {
   color: #3da46b;
 }
 
-.team-item .info-text {
+.tree-item .info-text {
   margin-bottom: 10px;
 }
 
-.team-item .info-text h3 {
-  font-size: 16px;
+.tree-item .info-text h3 {
+  font-size: 18px;
   text-transform: uppercase;
   font-weight: 500;
   margin-bottom: 5px;
 }
 
-.team-item .info-text h3 a {
+.tree-item .info-text h3 a {
   color: #333;
 }
 
-.team-item .info-text h3 a:hover {
+.tree-item .info-text h3 a:hover {
   color: #3da46b;
 }
 
-.team-item .info-text p {
+.tree-item .info-text p {
+  font-size: 16px;
   margin: 0;
-  color: #888;
+  color: rgb(2, 26, 12);
 }
 
-.team-item:hover .team-overlay {
+.tree-item:hover .tree-overlay {
   opacity: 1;
 }
 
@@ -1045,7 +1046,7 @@ hr {
   }
   
   .testimonial-item .info h2 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     line-height: 30px;
@@ -1274,7 +1275,7 @@ hr {
   
   /*cta
   */
-  #cta{background: ;}
+  #cta{background: #3da46b ;}
   
   /* Footer Area Start */
   .footer-area {
@@ -1414,4 +1415,6 @@ hr {
   .social-icon .google:hover {
     background: #CE332A;
   }
+
+  
   

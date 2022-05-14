@@ -13,7 +13,7 @@ class TreeDetailView(DetailView):
 
 class TreeListView(ListView):
     square = None
-    paginate_by = 4 #mudar para 4 depois
+    paginate_by = 6 #mudar para 4 depois
 
     def get_queryset(self):
         queryset = Tree.display.all()

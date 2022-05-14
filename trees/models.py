@@ -16,6 +16,7 @@ class DisplayManager(models.Manager):
 
 class Square(TimeStampedModel):
     name = models.CharField('Nome', max_length=255, unique=True)
+    is_display = models.BooleanField('Exibir', default=True)
     description = models.TextField('Descrição', max_length=200, blank=True) #implementado
     address = models.CharField('Endereço', max_length=255, blank=True)#implementado
     image1 = models.ImageField('imagem 1', upload_to=get_file_path, blank=True)#modificado original não tem 'imagem'
@@ -25,6 +26,10 @@ class Square(TimeStampedModel):
     image3 = models.ImageField('imagem 3', upload_to=get_file_path, blank=True)
     altimg3 = models.CharField('Alt imagem 3', max_length=150, blank=True)
     slug = AutoSlugField(unique=True, always_update=False, populate_from="name")
+
+
+    objects = models.Manager()
+    display = DisplayManager()
 
     class Meta:
         ordering = ("name",)
