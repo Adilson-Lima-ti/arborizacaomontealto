@@ -67,8 +67,8 @@
             </div>
         </div>
         <!-- Modal -->
-            <div class="modal fade bd-example-modal-lg" id="modal{{ tree.slug }}"  role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
+            <div class="modal fade" id="modal{{ tree.slug }}"  role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <a class="text-decoration-none text-dark" href="#modal{{ tree.slug }}"data-toggle="modal"></a><h1 class="font-weight-bold">{{ tree.name }}</h1><br>
@@ -80,13 +80,13 @@
                        
                         <div class="modal-body">
                             <h2>{{ tree.square }}</h2>
-                            <div class="container-fluid">
+                            <div class="container my-3">
                                 <div class="row">
                                     <div class="col-6 col-md-6 ">
-                                    <img class="img-fluid " src="/media/{{tree.image2}}" alt="{{ tree.altimg2 }}">
+                                    <img class="img-fluid img-thumbnail" src="/media/{{tree.image2}}" alt="{{ tree.altimg2 }}">
                                     </div>
                                     <div class="col-6 col-md-6">
-                                    <img class="img-fluid " src="/media/{{tree.image3}}" alt="{{ tree.altimg3 }}">
+                                    <img class="img-fluid img-thumbnail" src="/media/{{tree.image3}}" alt="{{ tree.altimg3 }}">
                                     </div>
                                     <div class="col-lg-12">
                                         <h2>{{tree.especie}}</h2>
