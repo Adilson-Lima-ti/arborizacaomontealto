@@ -16,7 +16,8 @@
 <div class="container-fluid"valign="top"> <!--my-3-->
     
     <div class="row" valign="top"><!--row-->
-        <div class="col-lg-3">
+        <div class="col-lg-2">
+            
             <div class="section-header text-center mb-8" >          
                 <h2 class="section-title wow fadeInDown mb-4" data-wow-delay="0.3s">Praças de Monte Alto</h2>
              
@@ -44,7 +45,7 @@
        
         <!--fim col-lg-3-->
    
-        <div class="col-lg-9">
+        <div class="col-lg-10">
                             
             <div class="row" valign="top">
             {% for tree in tree_list %}
@@ -55,31 +56,41 @@
                 <div class="tree-item wow fadeInRight" data-wow-delay="0.8s">
                     <div class="tree-img"><img class="card-img-top" src="/media/{{tree.image1}}" alt="{{ tree.altimg1 }}">
                     </div>   
-                <div class="contetn ">
+                <div class="contetn">
                     <div class="info-text">
-                        <a class="text-decoration-none text-dark" href="#modal{{ tree.slug }}"data-toggle="modal"><h3>{{ tree.name }}</a></h3>
-                    <p>{{ tree.specie }}</p>
-                    </div>
+                        <a class="info-text" href="#modal{{ tree.slug }}"data-toggle="modal"><h3>{{ tree.name }}</a></h3>
+                    <p><strong>Família: </strong>{{ tree.family }}</strong></p><br>
+                    <p><a class="info-text" href="#modalpraca{{ tree.slug }}"data-toggle="modal"><strong>{{ tree.square }}</strong></p>
+                    </div></a>
+                    
                     
                 </div>
                
                 </div>
             </div>
         </div>
-        <!-- Modal -->
+        <!-- Modal 1 -->
             <div class="modal fade bd-example-modal-lg" id="modal{{ tree.slug }}"  role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <a class="text-decoration-none text-dark" href="#modal{{ tree.slug }}"data-toggle="modal"></a><h1 class="font-weight-bold">{{ tree.name }}</h1><br>
+                            <a class="text-decoration-none text-dark" href="#modal{{ tree.slug }}"data-toggle="modal"></a><h3 class="font-weight-bold">{{ tree.name }}</h3>
+                            
                             
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         </div>
+                        
+                        
+                        <div class="col-lg-12">
+                            <h2>{{tree.especie}}</h2>
+                            <p>Família: <strong>{{tree.family}}</strong></p>
+                            <p>Origem: <strong>{{tree.source}}</strong></p>
+                        
+                        </div>
                        
                         <div class="modal-body">
-                            <h2>{{ tree.square }}</h2>
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-6 col-md-6 ">
@@ -89,9 +100,7 @@
                                     <img class="img-fluid " src="/media/{{tree.image3}}" alt="{{ tree.altimg3 }}">
                                     </div>
                                     <div class="col-lg-12">
-                                        <h2>{{tree.especie}}</h2>
-                                        <p>Família: <strong>{{tree.family}}</strong></p>
-                                        <p>Origem: <strong>{{tree.source}}</strong></p>
+                                     <p><br></p>
                                     <p>{{ tree.description }}</p>
                                     </div>
                                 </div>
@@ -101,6 +110,40 @@
                 </div>
             </div>
         <!--final modal-->
+        <!-- Modal 1 -->
+        <div class="modal fade bd-example-modal-lg" id="modalpraca{{ tree.slug }}"  role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <a class="text-decoration-none text-dark" href="#modal{{ tree.slug }}"data-toggle="modal"></a><h3 class="font-weight-bold">{{ tree.square.name }}</h3><br>
+                        
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                   
+                    <div class="modal-body">
+                          <div class="container-fluid md-4">
+                            <div class="row">
+                                <div class="col-6 col-md-6 ">
+                                <img class="img-fluid " src="/media/{{tree.square.image1}}" alt="{{ tree.square.altimg1 }}">
+                                </div>
+                                <div class="col-6 col-md-6">
+                                <img class="img-fluid " src="/media/{{tree.square.image2}}" alt="{{ tree.square.altimg2 }}">
+                                </div>
+                                <div class="col-lg-12">
+                                    <br>
+                                   <p><strong>{{tree.square.address}}</strong></p><br>
+                                    <p></p>
+                                <p>{{ tree.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--final modal-->
         {% endfor %}
     </div>
                <!-- % if forloop.counter|divisibleby:"3" and not forloop.last %

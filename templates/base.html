@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Fusion</title>
+    <title>Praças de Monte Alto</title>
 
     <!-- Bootstrap CSS -->
     <link rel="shortcut icon" href="{% static 'img/favicon.ico'%}" type="image/x-icon">
@@ -20,7 +20,7 @@
     <!-- Animate -->
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
     <!-- Main Style -->
-    
+
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <!-- Responsive Style -->
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
@@ -40,34 +40,27 @@
           </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
-           
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'pages:home' %}" ><i class="fas fa-home"> </i>
+                  Home
+                </a>
+              </li>
               <li class="nav-item dropdown">
-                <a href="{% url 'trees:list' %}" class="nav-link lead mr-4 font-weight-bold">Arvores</a>
+                <a href="{% url 'trees:list' %}" class="nav-link"><i class="fad fa-trees"> </i>Espécies</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about"><i class="fas fa-users"></i> Sobre Nós</a>
+                </li>
+             
               <li class="nav-item">
-                <a class="nav-link lead mr-2 font-weight-bold" href="#services">
-                  Services
-                </a>
+                <div class="btn-container">
+                  <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+                  <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+              </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link lead mr-2 font-weight-bold" href="#team"><i class="fas fa-home"> </i>
-                  Team
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#pricing">
-                  Pricing
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#testimonial">
-                  Testimonial
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">
-                  Contact
-                </a>
-              </li>
+              
+           
+        </li>
             </ul>
           </div>
         </div>
@@ -98,6 +91,9 @@
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/form-validator.min.js' %}"></script>
     <script src="{% static 'js/contact-form-script.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/cookie.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/script-acessib.js' %}"></script>
+    <script src="{% static 'js/contrast.class.js' %}"></script>
       
   </body>
 </html>
