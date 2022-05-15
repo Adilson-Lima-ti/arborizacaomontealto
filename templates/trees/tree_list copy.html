@@ -17,32 +17,19 @@
     
     <div class="row" valign="top"><!--row-->
         <div class="col-lg-2">
-           
             
             <div class="section-header text-center mb-8" >          
-                <h2 class="section-title wow fadeInDown mb-4" data-wow-delay="0.3s">Espécies</h2>
-                <div class="section-title wow fadeInDown mb-4" data-wow-delay="0.3s">
-                <div class="container-img mt-0">
-
-                    <img src="{% static 'icons/unknown.png' %}">
-                  </div>
-                  <div class="container-temp mx-2 my-1">
-                    <div>22</div>
-                    <span>°c</span>
-                  </div>
-                  <div class="weather py-2">Nublado</div>
-          <div class="humid"> Humidade: <span class="humidit">50%</span></div>
-        </div>
-                
+                <h2 class="section-title wow fadeInDown mb-4" data-wow-delay="0.3s">Praças de Monte Alto</h2>
+             
             </div>
             <ul class="list-group mb-3 mb-lg-8">
-                <!--<a class="text-decoration-none list-group-item list-group-item-light {% if not square %}active{% endif %}"
-                    href="% url 'trees:list' %">
+                <a class="text-decoration-none list-group-item list-group-item-light {% if not square %}active{% endif %}"
+                    href="{% url 'trees:list' %}">
                     Todos as praças
-                </a>-->
+                </a>
 
                 {% for praca in squaries %}
-                <a class="text-decoration-none  list-group-item-succes {% if square == praca %}active{% endif %}"
+                <a class="text-decoration-none list-group-item list-group-item-light {% if square == praca %}active{% endif %}"
                     href="{{ praca.get_absolute_url }}">
                     {{ praca.name }}
                 </a>
@@ -54,13 +41,21 @@
             {% include "pagination.html" with page=page_obj %}
             {% endif %}
             </div>
-            <div class="card">
+            <div class="card-body">
                 <div class="city">Monte Alto - SP</div>
                 <div class="date">Terça, 1 Dezembro 2020</div>
-         
-          
-          
-      </div>
+                <div class="container-img">
+      
+                  <img src="{% static 'icons/unknown.png' %}">
+                </div>
+                <div class="container-temp mx-2 my-3">
+                  <div>22</div>
+                  <span>°c</span>
+                </div>
+                <div class="weather py-2">Nublado</div>
+                <div class="humid"> Humidade: <strong><span class="humidit">49%</span></strong></div>
+                
+            </div>
         </div>
        
         <!--fim col-lg-3-->
@@ -104,10 +99,9 @@
                         
                         
                         <div class="col-lg-12">
-                            <p>Espécie: <strong><em>{{tree.specie}}</em></strong></p>
+                            <h2>{{tree.especie}}</h2>
                             <p>Família: <strong>{{tree.family}}</strong></p>
                             <p>Origem: <strong>{{tree.source}}</strong></p>
-                            <p>Quantidade: <strong>{{tree.quantidade}}</strong></p>
                         
                         </div>
                        

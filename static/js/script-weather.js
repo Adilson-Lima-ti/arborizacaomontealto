@@ -1,5 +1,5 @@
 const api = {
-    key: "64ed82577ced7f69cb1687f0ce536131",
+    key: "9089bde762cd424d212d7c45689053d1",
     base: "https://api.openweathermap.org/data/2.5/",
     lang: "pt_br",
     units: "metric"
@@ -34,7 +34,7 @@ const humidit = document.querySelector('.humidit');
 function displayResults(weather) {
     console.log(weather)
 
-    city.innerText = `${weather.name} - SP,`;//${weather.sys.country}
+    city.innerText = `${weather.name}`;//${weather.sys.country}
 
     let now = new Date();
     date.innerText = dateBuilder(now);

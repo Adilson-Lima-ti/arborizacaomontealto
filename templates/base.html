@@ -34,7 +34,7 @@
       <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
-          <a href="{% url 'pages:home' %}" class="navbar-brand"><img src="{% static 'img/logo.png' %}" alt=""></a>       
+          <a href="{% url 'pages:home' %}" class="navbar-brand"><img src="{% static 'img/logo.png' %}" alt="Braão de Monte Alto"></a>       
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <i class="lni-menu"></i>
           </button>
@@ -44,11 +44,15 @@
                 <a class="nav-link" href="{% url 'pages:home' %}" ><i class="fas fa-home"> </i>
                   Home
                 </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a href="{% url 'trees:list' %}" class="nav-link"><i class="fad fa-trees"> </i>Espécies</a>
+                </li>
+              <li class="nav-item">
+              <a class="nav-link" href="{% url 'trees:list' %}"><i class="fad fa-trees"> </i>Espécies</a>
+
                 <li class="nav-item">
                   <a class="nav-link" href="#about"><i class="fas fa-users"></i> Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'admin:index' %}"><i class="fad fa-user-cog"></i> Administração</a>
                 </li>
              
               <li class="nav-item">
@@ -93,7 +97,8 @@
     <script src="{% static 'js/contact-form-script.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/cookie.js' %}"></script>
 		<script type="text/javascript" src="{% static 'js/script-acessib.js' %}"></script>
-    <script src="{% static 'js/contrast.class.js' %}"></script>
+    <script src="{% static 'js/script-weather.js' %}"></script>
+    
       
   </body>
 </html>
